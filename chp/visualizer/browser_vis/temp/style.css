@@ -1,0 +1,165 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-family: Georgia;
+}
+
+a
+{
+  color: #000000;
+  /*text-decoration: none;*/
+  /*font-weight: bold;*/
+}
+
+#header
+{
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  font-size: 1.5em;
+  color: #FFF;
+  background-color: #333;
+  position: fixed;
+  top:0;
+}
+
+#footer
+{
+  width: 100%;
+  height: 10px;
+  margin: auto;
+  font-size: 1.5em;
+  background-color: #333;
+  position:fixed;
+  bottom:0;
+}
+
+#main
+{ 
+  padding: 50px 30px 30px 30px;
+  position: relative;
+  /* overflow: scroll; */
+}
+
+.circuitarea
+{
+  padding:2px;
+  margin: 2px;
+}
+
+.qubitarea
+{
+  padding:2px;
+  margin: 2px;
+  float: left;
+  text-align: right;
+}
+
+#submit_button{
+  margin: 10px;
+  padding: 3px;
+}
+
+div#form_elements{
+  width: 300px;
+  float: left;
+}
+
+select{
+  margin: 10px;
+  padding: 3px;
+}
+
+div.qwire{  
+  /* color: #000;
+  background-color: #000;	
+  height: 1px; not doing anything */
+  position: absolute;
+  border-top: 1px solid #F00;
+}
+
+div.vertical_wire{
+  border-left: 1px solid #000;
+}
+
+div.white_wire{
+  border-top: solid #FFF;
+}
+
+div.dashed_wire{
+  border-top: 1px dashed #000;	
+}
+
+.circle{
+}
+
+div.gate{
+  text-align:center;
+  border:1px solid #000;
+  background-color: #FFF;
+}
+
+div.light{
+  border:1px solid #888;	
+}
+
+div.container{
+  background-color: #EFE;
+}
+
+p.annotation{
+  font-size:9px; 
+  text-align:center; 
+  color: #888;	  
+}
+
+div.prepare{
+  font-size: 12px;	
+  border:1px solid #FFF;	  
+}
+
+p.verticallabel{
+  font-size:12px; text-align:center; 
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+p.gate{
+  position:relative;
+  top:25%;
+}
+
+div#bottommargin{
+  width:100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+
+}
+
+div#leftmargin{  
+  height: 100%;
+  width: 50px;
+  position:fixed;
+  right:0;
+  top:0;
+}
+
+div.target{
+  border:1px solid #000;
+}
+
+div.control{
+  border:1px solid #000; 
+  background-color: #000;
+}
+
+div.container_connection{
+ background-color: #333;
+}

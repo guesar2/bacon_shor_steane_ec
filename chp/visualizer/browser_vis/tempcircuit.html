@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<title>circuit</title>
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="visualizer/browser_vis/style.css" media="all" />	
+		<script type='text/javascript'>
+
+	function default_circ(){
+		$.ajax({
+			type: "POST",
+			data: 'filename= ',
+			url: "main.py",
+			success: function(data){
+				$('#main').html(data);
+			}
+		});
+	}
+
+	function showparams(){ 
+		$.ajax({
+			type: "GET",
+			url: "main.py?param_request=True",
+			success: function(data){
+				console.log(data);
+				var s = '<select name="filename">';
+				s += '<option value=" "> (file name) </option>';
+				$.each(data.filenames, function(ind, item){
+					s += '<option value="' + item + '">' + item + '</option>';
+					});
+				s += '</select>'
+				$('#form_elements').html(s);
+			}
+		});
+	}
+
+	function send(){
+		console.log("submitting");
+
+		var indata = $('form').serializeArray();
+		console.log(indata)
+		$.ajax({
+			  type: "POST",
+			  url: "main.py",
+			  data: indata,
+			  success: function(data){
+					$('#main').html(data);
+					console.log("received circuit")
+			  }
+		 });
+		return false;
+	}
+	
+	function main(){
+		showparams(); // combine requests later
+		default_circ();
+		$('#submit_button').click(send);
+	}
+
+	$(document).ready(main)
+
+	</script>
+
+  <body>
+	<div id="main">
