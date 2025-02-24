@@ -3,7 +3,7 @@
 This repository contains the source code used to generate the data for the paper _Improved Performance of the Bacon-Shor Code with Steane's Syndrome Extraction Method_ by Guillermo Escobar and Mauricio Gutiérrez ([https://arxiv.org/abs/2403.01659](https://arxiv.org/abs/2403.01659)).
 
 ## Overview
-The code uses a simulation toolkit with CHP as its core simulator. The main simulation scripts are located in the `src` directory:
+The code uses a simulation toolkit with [CHP](https://arxiv.org/abs/quant-ph/0406196) as its core simulator. The main simulation scripts are located in the `src` directory:
 - `sim_shor_ec.py`
 - `sim_steane_ec.py`
 
